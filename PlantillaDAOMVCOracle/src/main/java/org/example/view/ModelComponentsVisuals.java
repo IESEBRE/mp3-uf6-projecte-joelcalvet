@@ -1,36 +1,36 @@
 package org.example.view;
 
-import org.example.model.entities.Alumne;
+import org.example.model.entities.Ninja;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class ModelComponentsVisuals {
 
-    private DefaultTableModel modelTaulaAlumne;
-    private DefaultTableModel modelTaulaMat;
-    private ComboBoxModel<Alumne.Matricula.Modul> comboBoxModel;
+    private DefaultTableModel modelTaulaNinja;
+    private DefaultTableModel modelTaulaPoder;
+    private ComboBoxModel<Ninja.Poder.TipusChakra> comboBoxModel;
 
     //Getters
 
 
-    public ComboBoxModel<Alumne.Matricula.Modul> getComboBoxModel() {
+    public ComboBoxModel<Ninja.Poder.TipusChakra> getComboBoxModel() {
         return comboBoxModel;
     }
 
-    public DefaultTableModel getModelTaulaAlumne() {
-        return modelTaulaAlumne;
+    public DefaultTableModel getModelTaulaNinja() {
+        return modelTaulaNinja;
     }
 
-    public DefaultTableModel getModelTaulaMat() {
-        return modelTaulaMat;
+    public DefaultTableModel getModelTaulaPoder() {
+        return modelTaulaPoder;
     }
 
     public ModelComponentsVisuals() {
 
 
         //Anem a definir l'estructura de la taula dels alumnes
-        modelTaulaAlumne =new DefaultTableModel(new Object[]{"Nom","Pes","És alumne?","Object"},0){
+        modelTaulaNinja =new DefaultTableModel(new Object[]{"Nom","Anys","Està viu?","Object"},0){
             /**
              * Returns true regardless of parameter values.
              *
@@ -41,9 +41,6 @@ public class ModelComponentsVisuals {
              */
             @Override
             public boolean isCellEditable(int row, int column) {
-
-                //Fem que TOTES les cel·les de la columna 1 de la taula es puguen editar
-                //if(column==1) return true;
                 return false;
             }
 
@@ -52,16 +49,12 @@ public class ModelComponentsVisuals {
             //Permet definir el tipo de cada columna
             @Override
             public Class getColumnClass(int column) {
-                switch (column) {
-                    case 0:
-                        return String.class;
-                    case 1:
-                        return Double.class;
-                    case 2:
-                        return Boolean.class;
-                    default:
-                        return Object.class;
-                }
+                return switch (column) {
+                    case 0 -> String.class;
+                    case 1 -> Double.class;
+                    case 2 -> Boolean.class;
+                    default -> Object.class;
+                };
             }
         };
 
@@ -69,7 +62,7 @@ public class ModelComponentsVisuals {
 
 
         //Anem a definir l'estructura de la taula de les matrícules
-        modelTaulaMat =new DefaultTableModel(new Object[]{"MP","Nota"},0){
+        modelTaulaPoder =new DefaultTableModel(new Object[]{"Tipus de chakra","Quantitat de chakra"},0){
             /**
              * Returns true regardless of parameter values.
              *
@@ -80,30 +73,24 @@ public class ModelComponentsVisuals {
              */
             @Override
             public boolean isCellEditable(int row, int column) {
-
-                //Fem que TOTES les cel·les de la columna 1 de la taula es puguen editar
-                //if(column==1) return true;
                 return false;
             }
 
             //Permet definir el tipo de cada columna
             @Override
             public Class getColumnClass(int column) {
-                switch (column) {
-                    case 0:
-                        return Alumne.Matricula.Modul.class;
-                    case 1:
-                        return Integer.class;
-                    default:
-                        return Object.class;
-                }
+                return switch (column) {
+                    case 0 -> Ninja.Poder.TipusChakra.class;
+                    case 1 -> Integer.class;
+                    default -> Object.class;
+                };
             }
         };
 
 
 
         //Estructura del comboBox
-        comboBoxModel=new DefaultComboBoxModel<>(Alumne.Matricula.Modul.values());
+        comboBoxModel=new DefaultComboBoxModel<>(Ninja.Poder.TipusChakra.values());
 
 
 

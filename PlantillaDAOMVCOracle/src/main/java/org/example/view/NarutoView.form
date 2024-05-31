@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.view.MatriculaView">
-  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.view.NarutoView">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="549" height="720"/>
+      <xy x="20" y="20" width="1220" height="1061"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <tabbedpane id="5eac" binding="pestanyes">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="200"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-15397377"/>
+        </properties>
         <border type="none"/>
         <children>
           <grid id="1aebb" layout-manager="GridBagLayout">
             <constraints>
-              <tabbedpane title="Alumne"/>
+              <tabbedpane title="Ninja"/>
             </constraints>
-            <properties/>
+            <properties>
+              <foreground color="-1"/>
+            </properties>
             <border type="none"/>
             <children>
               <hspacer id="bbde1">
@@ -70,7 +74,7 @@
                   <text value="Nom"/>
                 </properties>
               </component>
-              <component id="4cd29" class="javax.swing.JTextField" binding="campPes">
+              <component id="4cd29" class="javax.swing.JTextField" binding="campAnys">
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -85,7 +89,7 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="Pes"/>
+                  <text value="Anys"/>
                 </properties>
               </component>
               <component id="febf3" class="javax.swing.JLabel">
@@ -94,10 +98,10 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="Alumne?"/>
+                  <text value="Està viu?"/>
                 </properties>
               </component>
-              <component id="7d651" class="javax.swing.JCheckBox" binding="caixaAlumne">
+              <component id="7d651" class="javax.swing.JCheckBox" binding="caixaVius">
                 <constraints>
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -110,7 +114,7 @@
           </grid>
           <grid id="a588c" layout-manager="GridBagLayout">
             <constraints>
-              <tabbedpane title="Matrícula"/>
+              <tabbedpane title="Poder"/>
             </constraints>
             <properties/>
             <border type="none"/>
@@ -125,7 +129,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="3b262" class="javax.swing.JTable" binding="taulaMat">
+                  <component id="3b262" class="javax.swing.JTable" binding="taulaPoder">
                     <constraints/>
                     <properties/>
                   </component>
@@ -149,10 +153,10 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="MP:"/>
+                  <text value="Tipus de chakra:"/>
                 </properties>
               </component>
-              <component id="2f5eb" class="javax.swing.JComboBox" binding="comboMP">
+              <component id="2f5eb" class="javax.swing.JComboBox" binding="comboChakra">
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -165,10 +169,10 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="Nota:"/>
+                  <text value="Quantitat de chakra:"/>
                 </properties>
               </component>
-              <component id="4cf6a" class="javax.swing.JTextField" binding="campNota">
+              <component id="4cf6a" class="javax.swing.JTextField" binding="campChakra">
                 <constraints>
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -183,7 +187,7 @@
       </tabbedpane>
       <component id="9ede4" class="javax.swing.JButton" binding="modificarButton" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Modificar"/>
@@ -191,7 +195,7 @@
       </component>
       <component id="f46a9" class="javax.swing.JButton" binding="borrarButton" default-binding="true">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Borrar"/>
@@ -199,10 +203,28 @@
       </component>
       <component id="c34c9" class="javax.swing.JButton" binding="insertarButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Insertar"/>
+        </properties>
+      </component>
+      <component id="ba786" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="hokage.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="b70a2" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="sasuke.png"/>
+          <text value=""/>
         </properties>
       </component>
     </children>

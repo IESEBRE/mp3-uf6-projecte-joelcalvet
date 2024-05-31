@@ -3,7 +3,7 @@ package org.example.view;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class MatriculaView extends JFrame{
+public class NarutoView extends JFrame{
     private JTabbedPane pestanyes;
     private JTable taula;
     private JScrollPane scrollPane1;
@@ -11,27 +11,27 @@ public class MatriculaView extends JFrame{
     private JButton modificarButton;
     private JButton borrarButton;
     private JTextField campNom;
-    private JTextField campPes;
-    private JCheckBox caixaAlumne;
+    private JTextField campAnys;
+    private JCheckBox caixaVius;
     private JPanel panel;
-    private JTable taulaMat;
-    private JComboBox comboMP;
-    private JTextField campNota;
+    private JTable taulaPoder;
+    private JComboBox comboChakra;
+    private JTextField campChakra;
     //private JTabbedPane PanelPestanya;
 
     //Getters
 
 
-    public JTable getTaulaMat() {
-        return taulaMat;
+    public JTable getTaulaPoder() {
+        return taulaPoder;
     }
 
-    public JComboBox getComboMP() {
-        return comboMP;
+    public JComboBox getComboChakra() {
+        return comboChakra;
     }
 
-    public JTextField getCampNota() {
-        return campNota;
+    public JTextField getCampChakra() {
+        return campChakra;
     }
 
     public JTabbedPane getPestanyes() {
@@ -58,17 +58,17 @@ public class MatriculaView extends JFrame{
         return campNom;
     }
 
-    public JTextField getCampPes() {
-        return campPes;
+    public JTextField getCampAnys() {
+        return campAnys;
     }
 
-    public JCheckBox getCaixaAlumne() {
-        return caixaAlumne;
+    public JCheckBox getCaixaVius() {
+        return caixaVius;
     }
 
 
     //Constructor de la classe
-    public MatriculaView() {
+    public NarutoView() {
 
 
         //Per poder vore la finestra
