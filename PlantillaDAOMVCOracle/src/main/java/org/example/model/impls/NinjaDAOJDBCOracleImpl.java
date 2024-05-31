@@ -17,7 +17,7 @@ public class NinjaDAOJDBCOracleImpl implements DAO<Ninja> {
 
     static {
         Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream("src/main/resources/system.properties")) {
+        try (FileInputStream fis = new FileInputStream("src/main/resources/database.properties")) {
             properties.load(fis);
         } catch (IOException e) {
             e.printStackTrace();
